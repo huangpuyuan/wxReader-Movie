@@ -1,0 +1,13 @@
+<template name="starsTemplate">
+  <view class="stars-container">
+    <view class="stars">
+      <block wx:for="{{stars}}" wx:for-item="i"><!--//原理i=1时为真，i=0时为假 <image wx:if="{{i}}" </image>
+			<image wx:else ></image> -->
+        <image wx:if="{{i==1}}" src="/images/icon/star.png"></image>
+        <image wx:elif="{{i==2}}" src="/images/icon/half-star.png"></image>
+        <image wx:else src="/images/icon/none-star.png"></image>
+      </block>
+    </view>
+    <text class="star-score">{{score}}</text>
+  </view>
+</template>
